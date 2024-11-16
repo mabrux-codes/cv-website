@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Effect</title>
+    <style>
+      /* Set up the container */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+/* Apply styles to the typing effect element */
+.typing-effect {
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;  /* Prevent wrapping of text */
+    overflow: hidden;     /* Hide the text overflow initially */
+    border-right: 3px solid black;  /* Simulate a cursor */
+    padding-right: 5px;
+    animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;  /* Start with no visible text */
+    }
+    to {
+        width: 100%;  /* Expand the width to reveal all the text */
+    }
+}
+
+/* Blink cursor animation */
+@keyframes blink {
+    50% {
+        border-color: transparent; /* Make the cursor disappear */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="typing-effect">
+        Hello, welcome to the typing effect tutorial!
+    </div>
+</body>
+</html>
